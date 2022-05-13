@@ -11,6 +11,9 @@ function embedForm(params) {
   } else if (screen.width > 592) {
     height.changeHeight = 600;
   }
+  window.onresize = () => {
+    window.location.reload();
+  };
   let embed =
     "" +
     "<embed" +
