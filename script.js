@@ -1,15 +1,15 @@
 function embedForm(params) {
   let height = {
-    heightWindow: 600,
+    heightWindow: 460,
 
     set changeHeight(newHeight) {
       this.heightWindow = newHeight;
     },
   };
   if (screen.width <= 592) {
-    height.changeHeight = 780;
-  } else if (screen.width > 592) {
     height.changeHeight = 600;
+  } else if (screen.width > 592) {
+    height.changeHeight = 460;
   }
   window.onresize = () => {
     window.location.reload();
@@ -23,5 +23,9 @@ function embedForm(params) {
     `      height="${height.heightWindow}px"` +
     "    />" +
     "";
-  document.getElementById(`${params.selector}`).innerHTML = embed;
+
+  const para = document.createElement("div");
+  para.setAttribute("id", "form-embed");
+  document.body.appendChild(para);
+  document.getElementById(`${params.idTarget}`).innerHTML = embed;
 }

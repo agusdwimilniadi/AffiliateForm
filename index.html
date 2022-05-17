@@ -8,13 +8,6 @@
   </head>
   <body>
     <div id="one"></div>
-    <script src="script.js"></script>
-    <script>
-      embedForm({
-        selector: "one",
-        id: "121212",
-      });
-    </script>
     <div>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem laborum
       nobis eum esse ipsam molestiae illo. Labore, omnis, deleniti pariatur
@@ -30,5 +23,12 @@
       praesentium rerum culpa quo esse delectus voluptas dignissimos explicabo
       iusto iure amet.
     </div>
+    <script src="script.js"></script>
+    <script>
+      embedForm({
+        id: "121212",
+        idTarget: "one",
+      });
+    </script>
   </body>
 </html>
